@@ -12,6 +12,8 @@
 </ion-header>
 
 <ion-content fullscreen>
+
+	<!-- Medu de lado -->
 	<ion-menu [content]="content">
 		<ion-header>
 			<ion-toolbar>
@@ -19,6 +21,7 @@
 			</ion-toolbar>
 		</ion-header>
 		<ion-content>
+			<!-- creador de canciones -->
 			<form>
 				<ion-list>
 					<ion-input [(ngModel)]="banda" type="text" name="banda" placeholder="Nombre de banda"></ion-input>
@@ -35,7 +38,10 @@
 
 	<ion-nav id="nav" #content [root]="rootPage">
 	</ion-nav>
+	
+	<!-- Lista -->
 	<ion-list>
+		<!-- Hacer un for que muestre cancion por cancion con la opcion de "Elegir cancion" --> 
 		<button ion-item *ngFor="let cancion of canciones" (click)="cancionElegida(cancion)">
 			{{ cancion }}
 		</button>
